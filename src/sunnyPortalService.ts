@@ -194,8 +194,8 @@ export class SunnyPortalService {
                     this.logger.debug('SUCCESSFULLY LOGGED IN');
                     callback(err, this.jar);
                 } else {
-                    this.logger.warn('Login Failed, no redirect to Dashboard');
-                    callback(new Error('Login Failed, no redirect to Dashboard'));
+                    this.logger.warn('No redirect to Dashboard');
+                    callback(err, this.jar);
                 }
             });
         });
